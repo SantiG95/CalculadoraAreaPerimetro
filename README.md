@@ -1,2 +1,2 @@
 # CalculadoraAreaPerimetro
-Proyecto personal combinando varios ejercicios de facultad
+Calculadora que permite calcular el area y perimetro de varias figuras geometricas
