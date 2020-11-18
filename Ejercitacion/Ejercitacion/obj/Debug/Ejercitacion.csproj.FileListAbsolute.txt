@@ -1,0 +1,13 @@
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.csprojAssemblyReference.cache
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.Form1.resources
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.Properties.Resources.resources
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.csproj.GenerateResource.cache
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.csproj.CoreCompileInputs.cache
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\bin\Debug\Funciones.dll
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\bin\Debug\Funciones.pdb
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Ejercitacion.csproj.CopyComplete
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\bin\Debug\Perimetros y Areas.exe.config
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\bin\Debug\Perimetros y Areas.exe
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\bin\Debug\Perimetros y Areas.pdb
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Perimetros y Areas.exe
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Ejercitacion\obj\Debug\Perimetros y Areas.pdb

@@ -1,0 +1,6 @@
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\bin\Debug\Funciones.dll
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\bin\Debug\Funciones.pdb
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\obj\Debug\Funciones.csproj.CoreCompileInputs.cache
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\obj\Debug\Funciones.dll
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\obj\Debug\Funciones.pdb
+C:\Users\santi\Documents\C#\Ejercitacion\Ejercitacion\Funciones\obj\Debug\Funciones.csprojAssemblyReference.cache
