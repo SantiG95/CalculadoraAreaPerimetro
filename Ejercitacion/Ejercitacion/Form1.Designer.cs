@@ -41,49 +41,56 @@
             this.resultado = new System.Windows.Forms.Label();
             this.faltanDatos = new System.Windows.Forms.Label();
             this.operacionLabel = new System.Windows.Forms.Label();
+            this.formaPreviewBox = new System.Windows.Forms.PictureBox();
+            this.reset = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.formaPreviewBox)).BeginInit();
             this.SuspendLayout();
             // 
             // baseBox
             // 
             this.baseBox.AllowDrop = true;
             this.baseBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseBox.Location = new System.Drawing.Point(102, 157);
+            this.baseBox.Location = new System.Drawing.Point(40, 161);
             this.baseBox.Name = "baseBox";
             this.baseBox.Size = new System.Drawing.Size(121, 30);
             this.baseBox.TabIndex = 0;
             this.baseBox.Text = "\r\n";
             this.baseBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.baseBox.Visible = false;
             this.baseBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.limitadorInput);
             // 
             // alturaBox
             // 
             this.alturaBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alturaBox.Location = new System.Drawing.Point(338, 157);
+            this.alturaBox.Location = new System.Drawing.Point(220, 161);
             this.alturaBox.Name = "alturaBox";
             this.alturaBox.Size = new System.Drawing.Size(121, 30);
             this.alturaBox.TabIndex = 1;
             this.alturaBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.alturaBox.Visible = false;
             this.alturaBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.limitadorInput);
             // 
             // baseLabel
             // 
             this.baseLabel.AutoSize = true;
             this.baseLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.baseLabel.Location = new System.Drawing.Point(129, 123);
+            this.baseLabel.Location = new System.Drawing.Point(67, 127);
             this.baseLabel.Name = "baseLabel";
             this.baseLabel.Size = new System.Drawing.Size(57, 25);
             this.baseLabel.TabIndex = 2;
             this.baseLabel.Text = "Base";
+            this.baseLabel.Visible = false;
             // 
             // alturaLabel
             // 
             this.alturaLabel.AutoSize = true;
             this.alturaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alturaLabel.Location = new System.Drawing.Point(372, 123);
+            this.alturaLabel.Location = new System.Drawing.Point(254, 127);
             this.alturaLabel.Name = "alturaLabel";
             this.alturaLabel.Size = new System.Drawing.Size(63, 25);
             this.alturaLabel.TabIndex = 3;
             this.alturaLabel.Text = "Altura";
+            this.alturaLabel.Visible = false;
             // 
             // formaBox
             // 
@@ -94,7 +101,7 @@
             "Cuadrado",
             "Circulo",
             "Triangulo"});
-            this.formaBox.Location = new System.Drawing.Point(102, 60);
+            this.formaBox.Location = new System.Drawing.Point(40, 64);
             this.formaBox.Name = "formaBox";
             this.formaBox.Size = new System.Drawing.Size(121, 33);
             this.formaBox.TabIndex = 4;
@@ -107,16 +114,17 @@
             this.operacionBox.Items.AddRange(new object[] {
             "Perimetro",
             "Area"});
-            this.operacionBox.Location = new System.Drawing.Point(338, 60);
+            this.operacionBox.Location = new System.Drawing.Point(220, 64);
             this.operacionBox.Name = "operacionBox";
             this.operacionBox.Size = new System.Drawing.Size(121, 33);
             this.operacionBox.TabIndex = 5;
+            this.operacionBox.SelectionChangeCommitted += new System.EventHandler(this.operacionBox_SelectionChangeCommitted);
             // 
             // forma
             // 
             this.forma.AutoSize = true;
             this.forma.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forma.Location = new System.Drawing.Point(129, 26);
+            this.forma.Location = new System.Drawing.Point(67, 30);
             this.forma.Name = "forma";
             this.forma.Size = new System.Drawing.Size(68, 25);
             this.forma.TabIndex = 6;
@@ -126,7 +134,7 @@
             // 
             this.operacion.AutoSize = true;
             this.operacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.operacion.Location = new System.Drawing.Point(346, 26);
+            this.operacion.Location = new System.Drawing.Point(228, 30);
             this.operacion.Name = "operacion";
             this.operacion.Size = new System.Drawing.Size(103, 25);
             this.operacion.TabIndex = 7;
@@ -134,10 +142,10 @@
             // 
             // calcular
             // 
-            this.calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calcular.Location = new System.Drawing.Point(210, 226);
+            this.calcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calcular.Location = new System.Drawing.Point(220, 226);
             this.calcular.Name = "calcular";
-            this.calcular.Size = new System.Drawing.Size(135, 50);
+            this.calcular.Size = new System.Drawing.Size(121, 50);
             this.calcular.TabIndex = 8;
             this.calcular.Text = "Calcular";
             this.calcular.UseVisualStyleBackColor = true;
@@ -178,11 +186,34 @@
             this.operacionLabel.TabIndex = 12;
             this.operacionLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // formaPreviewBox
+            // 
+            this.formaPreviewBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.formaPreviewBox.Image = global::Ejercitacion.Properties.Resources.Nada;
+            this.formaPreviewBox.Location = new System.Drawing.Point(375, 30);
+            this.formaPreviewBox.Name = "formaPreviewBox";
+            this.formaPreviewBox.Size = new System.Drawing.Size(200, 200);
+            this.formaPreviewBox.TabIndex = 13;
+            this.formaPreviewBox.TabStop = false;
+            // 
+            // reset
+            // 
+            this.reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reset.Location = new System.Drawing.Point(40, 226);
+            this.reset.Name = "reset";
+            this.reset.Size = new System.Drawing.Size(121, 50);
+            this.reset.TabIndex = 14;
+            this.reset.Text = "Resetear";
+            this.reset.UseVisualStyleBackColor = true;
+            this.reset.MouseClick += new System.Windows.Forms.MouseEventHandler(this.reset_MouseClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 377);
+            this.Controls.Add(this.reset);
+            this.Controls.Add(this.formaPreviewBox);
             this.Controls.Add(this.operacionLabel);
             this.Controls.Add(this.faltanDatos);
             this.Controls.Add(this.resultado);
@@ -200,6 +231,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Perimetros y Areas";
+            ((System.ComponentModel.ISupportInitialize)(this.formaPreviewBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -219,6 +251,8 @@
         private System.Windows.Forms.Label resultado;
         private System.Windows.Forms.Label faltanDatos;
         private System.Windows.Forms.Label operacionLabel;
+        private System.Windows.Forms.PictureBox formaPreviewBox;
+        private System.Windows.Forms.Button reset;
     }
 }
 

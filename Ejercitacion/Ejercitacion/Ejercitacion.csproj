@@ -68,6 +68,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -89,6 +90,19 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Circulo.png" />
+    <None Include="Resources\CirculoArea.png" />
+    <None Include="Resources\CirculoPerimetro.png" />
+    <None Include="Resources\Cuadrado.png" />
+    <None Include="Resources\CuadradoArea.png" />
+    <None Include="Resources\CuadradoPerimetro.png" />
+    <None Include="Resources\Nada.png" />
+    <None Include="Resources\Rectangulo.png" />
+    <None Include="Resources\RectanguloArea.png" />
+    <None Include="Resources\RectanguloPerimetro.png" />
+    <None Include="Resources\Triangulo.png" />
+    <None Include="Resources\TrianguloArea.png" />
+    <None Include="Resources\TrianguloPerimetro.png" />
     <Content Include="shapes-27522_640.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

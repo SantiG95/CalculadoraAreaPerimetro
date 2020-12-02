@@ -118,6 +118,9 @@ namespace Ejercitacion
 
         private void formaBox_SelectionChangeCommitted(object sender, EventArgs e)
         {
+            formaPreviewBox_changer();
+            baseBox.Visible = true;
+            baseLabel.Visible = true;
             switch (formaBox.SelectedIndex)
             {
                 case 0:
@@ -148,10 +151,117 @@ namespace Ejercitacion
 
                 default:
                     {
+                        baseLabel.Visible = false;
+                        baseBox.Visible = false;
+                        alturaLabel.Visible = false;
+                        alturaBox.Visible = false;
                         break;
                     }
             }
 
+        }
+
+        private void formaPreviewBox_changer()
+        {
+            switch (formaBox.SelectedIndex)
+            {
+                case 0:
+                    {
+                        switch (operacionBox.SelectedIndex)
+                        {
+                            case 0:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.RectanguloPerimetro;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.RectanguloArea;
+                                    break;
+                                }
+                            default:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.Rectangulo;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+
+                case 1:
+                    {
+                        switch (operacionBox.SelectedIndex)
+                        {
+                            case 0:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.CuadradoPerimetro;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.CuadradoArea;
+                                    break;
+                                }
+                            default:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.Cuadrado;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+
+                case 2:
+                    {
+                        switch (operacionBox.SelectedIndex)
+                        {
+                            case 0:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.CirculoPerimetro;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.CirculoArea;
+                                    break;
+                                }
+                            default:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.Circulo;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+
+                case 3:
+                    {
+                        switch (operacionBox.SelectedIndex)
+                        {
+                            case 0:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.TrianguloPerimetro;
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.TrianguloArea;
+                                    break;
+                                }
+                            default:
+                                {
+                                    formaPreviewBox.Image = Ejercitacion.Properties.Resources.Triangulo;
+                                    break;
+                                }
+                        }
+                        break;
+                    }
+
+                default:
+                    {
+                        break;
+                    }
+            }
         }
 
         private bool controlCamposCompletos(bool dobleVariable)
@@ -173,6 +283,26 @@ namespace Ejercitacion
             }
             
             return false;
+        }
+
+        private void operacionBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            formaPreviewBox_changer();
+        }
+
+        private void reset_MouseClick(object sender, MouseEventArgs e)
+        {
+            formaBox.SelectedItem = null;
+            operacionBox.SelectedItem = null;
+            baseLabel.Visible = false;
+            alturaLabel.Visible = false;
+            baseBox.Visible = false;
+            alturaBox.Visible = false;
+            baseBox.Text = "";
+            alturaBox.Text = "";
+            resultado.Text = "";
+            operacionLabel.Text = "";
+            formaPreviewBox.Image = Ejercitacion.Properties.Resources.Nada;
         }
     }
 }
